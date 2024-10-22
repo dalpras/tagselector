@@ -34,10 +34,11 @@
   },
   "homepage": "https://github.com/RyanFitzgerald/tagselector#readme",
   "devDependencies": {
+    "@babel/cli": "^7.25.7",
+    "@babel/core": "^7.25.8",
+    "@babel/plugin-transform-modules-umd": "^7.25.7",
+    "@babel/preset-env": "^7.25.8",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-rename-umd-globals": "^1.0.0",
-    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "sass": "^1.56.1"
   }

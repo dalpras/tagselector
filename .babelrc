@@ -1,10 +1,10 @@
 {
-
   "presets": ["@babel/preset-env"],
   "plugins": [
-    ["transform-es2015-modules-umd"],
-    ["rename-umd-globals", {
-      "tagselector": "TagSelector"
+    ["@babel/plugin-transform-modules-umd", {
+      "globals": {
+        "tagselector": "TagSelector"
+      }
     }]
   ]
 }
