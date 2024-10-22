@@ -9,7 +9,7 @@
     "test": "npm run lint",
     "build": "npm run build-js && npm run build-css",
     "build-js": "babel --minified src/tagselector.js -o dist/tagselector.js",
-    "build-css": "node-sass --include-path scss src/tagselector.scss dist/tagselector.css --output-style compressed"
+    "build-css": "sass --style=compressed src/tagselector.scss dist/tagselector.css"
   },
   "repository": {
     "type": "git",
@@ -35,10 +35,10 @@
   "homepage": "https://github.com/RyanFitzgerald/tagselector#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-plugin-rename-umd-globals": "^1.0.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "node-sass": "^4.5.3"
+    "babel-preset-env": "^1.7.0",
+    "sass": "^1.56.1"
   }
 }
