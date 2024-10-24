@@ -224,4 +224,7 @@ class TagSelector {
   }
 }
 
-module.exports = TagSelector;
+// module.exports = TagSelector;
+
+// At the end of your tagselector.js file
+export default TagSelector; // Use this line to export the class

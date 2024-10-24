@@ -4,12 +4,7 @@
   "description": "Turn HTML select fields into customizable / user friendly tags",
   "main": "dist/tagselector.js",
   "scripts": {
-    "watch": "babel --minified src/tagselector.js -o dist/tagselector.js --watch",
-    "lint": "eslint src",
-    "test": "npm run lint",
-    "build": "npm run build-js && npm run build-css",
-    "build-js": "babel --minified src/tagselector.js -o dist/tagselector.js",
-    "build-css": "sass --style=compressed src/tagselector.scss dist/tagselector.css"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -35,11 +30,12 @@
   "homepage": "https://github.com/RyanFitzgerald/tagselector#readme",
   "devDependencies": {
     "@babel/cli": "^7.25.7",
-    "@babel/core": "^7.25.8",
-    "@babel/plugin-transform-modules-umd": "^7.25.7",
-    "@babel/preset-env": "^7.25.8",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.25.9",
+    "@babel/preset-env": "^7.25.9",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^2.79.2",
+    "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.56.1"
   }
 }
