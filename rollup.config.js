@@ -1,4 +1,7 @@
 import babel from '@rollup/plugin-babel';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser'; // Default import for Terser
 
@@ -11,11 +14,14 @@ export default {
     sourcemap: true, // Generate sourcemaps for JS
   },
   plugins: [
+    resolve(),
+    commonjs(),
     postcss({
-      extract: 'dist/tagselector.css', // Output CSS file path
-      minimize: true, // Minify the CSS
-      sourceMap: true, // Generate sourcemaps for CSS
-    }),
+        plugins: [autoprefixer()],
+        extract: true,  // Extract CSS into a separate file
+        minimize: false, // Minimize CSS
+        sourceMap: true // Enable source maps for CSS
+    }),    
     babel({
       babelHelpers: 'bundled', // Required for the new Babel plugin
       exclude: 'node_modules/**', // Only transpile our source code

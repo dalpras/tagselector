@@ -4,7 +4,8 @@
   "description": "Turn HTML select fields into customizable / user friendly tags",
   "main": "dist/tagselector.js",
   "scripts": {
-    "build": "rollup -c"
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,11 @@
     "@babel/core": "^7.25.9",
     "@babel/preset-env": "^7.25.9",
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.20",
+    "rimraf": "^6.0.1",
     "rollup": "^2.79.2",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.56.1"
