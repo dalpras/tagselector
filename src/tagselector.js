@@ -1,12 +1,5 @@
 /*!
  * TagSelector
- * 
- * @author Ryan Fitzgerald
- * @version 0.2.1
- * @license MIT
- * 
- * Repo: https://github.com/RyanFitzgerald/tagselector
- * Issues: https://github.com/RyanFitzgerald/tagselector/issues
  */ 
 const defaults = {
   max: false,
